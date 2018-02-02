@@ -1,0 +1,420 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es"><!-- InstanceBegin template="/Templates/index_n_ficti.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<link rel="shortcut icon" href="../../images/favicon.ico" />
+<meta name="author" content="Unimedios" />
+<meta name="DC.Creator" content="Unimedios" />
+<meta name="distribution" content="all" />
+<meta name="revisit" content="1 days" />
+<meta name="robots" content="all" />
+<meta http-equiv="pragma" content="no-cache"/>
+<meta http-equiv="cache-control" content="no-cache, must-revalidate"/>
+<meta http-equiv="expires" content="0"/>
+<meta http-equiv="last-modified" content=""/>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<link href="../../estilos.css" rel="stylesheet" type="text/css" />
+<link href="../../images/template/css/allCSS.css" rel="stylesheet" type="text/css" />
+<script src="http://www.unal.edu.co/js/menusUN.js" type="text/javascript" language="javascript" ></script>
+<script src="../../SpryAssets/SpryCollapsiblePanel.js" type="text/javascript"></script>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Dirección Académica Sede Bogotá</title>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" -->
+
+<script type="text/javascript" src="./js/datepicker.js"></script>
+        <link href="./css/demo.css"       rel="stylesheet" type="text/css" />
+        <link href="./css/datepicker.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript">
+//<![CDATA[
+
+/*
+        A "Reservation Date" example using two datePickers
+        --------------------------------------------------
+
+        * Functionality
+
+        1. When the page loads:
+                - We clear the value of the two inputs (to clear any values cached by the browser)
+                - We set an "onchange" event handler on the startDate input to call the setReservationDates function
+        2. When a start date is selected
+                - We set the low range of the endDate datePicker to be the start date the user has just selected
+                - If the endDate input already has a date stipulated and the date falls before the new start date then we clear the input's value
+
+        * Caveats (aren't there always)
+
+        - This demo has been written for dates that have NOT been split across three inputs
+
+*/
+
+function makeTwoChars(inp) {
+        return String(inp).length < 2 ? "0" + inp : inp;
+}
+
+function initialiseInputs() {
+        // Clear any old values from the inputs (that might be cached by the browser after a page reload)
+        document.getElementById("sd").value = "";
+        document.getElementById("ed").value = "";
+
+        // Add the onchange event handler to the start date input
+        datePickerController.addEvent(document.getElementById("sd"), "change", setReservationDates);
+}
+
+var initAttempts = 0;
+
+function setReservationDates(e) {
+        // Internet Explorer will not have created the datePickers yet so we poll the datePickerController Object using a setTimeout
+        // until they become available (a maximum of ten times in case something has gone horribly wrong)
+
+        try {
+                var sd = datePickerController.getDatePicker("sd");
+                var ed = datePickerController.getDatePicker("ed");
+        } catch (err) {
+                if(initAttempts++ < 10) setTimeout("setReservationDates()", 50);
+                return;
+        }
+
+        // Check the value of the input is a date of the correct format
+        var dt = datePickerController.dateFormat(this.value, sd.format.charAt(0) == "m");
+
+        // If the input's value cannot be parsed as a valid date then return
+        if(dt == 0) return;
+
+        // At this stage we have a valid YYYYMMDD date
+
+        // Grab the value set within the endDate input and parse it using the dateFormat method
+        // N.B: The second parameter to the dateFormat function, if TRUE, tells the function to favour the m-d-y date format
+        var edv = datePickerController.dateFormat(document.getElementById("ed").value, ed.format.charAt(0) == "m");
+
+        // Set the low range of the second datePicker to be the date parsed from the first
+        ed.setRangeLow( dt );
+        
+        // If theres a value already present within the end date input and it's smaller than the start date
+        // then clear the end date value
+        if(edv < dt) {
+                document.getElementById("ed").value = "";
+        }
+}
+
+function removeInputEvents() {
+        // Remove the onchange event handler set within the function initialiseInputs
+        datePickerController.removeEvent(document.getElementById("sd"), "change", setReservationDates);
+}
+
+datePickerController.addEvent(window, 'load', initialiseInputs);
+datePickerController.addEvent(window, 'unload', removeInputEvents);
+
+//]]>
+</script>
+<style type="text/css">
+body, html
+        {
+        height:100%;
+        }
+</style>
+
+<!-- InstanceEndEditable -->
+<script type="text/javascript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+//-->
+</script>
+<link href="../../SpryAssets/SpryCollapsiblePanel.css" rel="stylesheet" type="text/css" />
+<!-- InstanceParam name="myv" type="URL" value="../../images/rediseño 2012/menu/1-inicio/ii-002.png" -->
+<!-- InstanceParam name="fun" type="URL" value="../../images/rediseño 2012/menu/1-inicio/ii-003.png" -->
+<!-- InstanceParam name="dir" type="URL" value="../../images/rediseño 2012/menu/1-inicio/ii-004.png" -->
+<!-- InstanceParam name="con" type="URL" value="../../images/rediseño 2012/menu/1-inicio/ii-005.png" -->
+<!-- InstanceParam name="conf" type="URL" value="../../images/rediseño 2012/menu/1-inicio/ii-007.png" -->
+<!-- InstanceParam name="proy4" type="URL" value="../../images/rediseño 2012/menu/2-proyectos/ip-005.png" -->
+<!-- InstanceParam name="proce1" type="URL" value="../../images/rediseño 2012/menu/3-curricular/ic-002.png" -->
+<!-- InstanceParam name="proc2" type="URL" value="../../images/rediseño 2012/menu/3-curricular/ic-003.png" -->
+<!-- InstanceParam name="proc3" type="URL" value="../../images/rediseño 2012/menu/3-curricular/ic-004.png" -->
+<!-- InstanceParam name="proc4" type="URL" value="../../images/rediseño 2012/menu/3-curricular/ic-005.png" -->
+<!-- InstanceParam name="proc5" type="URL" value="../../images/rediseño 2012/menu/3-curricular/ic-006.png" -->
+<!-- InstanceParam name="proc6" type="URL" value="../../images/rediseño 2012/menu/3-curricular/ic-007.png" -->
+<!-- InstanceParam name="proc7" type="URL" value="../../images/rediseño 2012/menu/3-curricular/ic-008.png" -->
+<!-- InstanceParam name="proc8" type="URL" value="../../images/rediseño 2012/menu/3-curricular/ic-009.png" -->
+<!-- InstanceParam name="proc9" type="URL" value="../../images/rediseño 2012/menu/3-curricular/ic-010.png" -->
+<!-- InstanceParam name="proc11" type="URL" value="../../images/rediseño 2012/menu/3-curricular/ic-012.png" -->
+<!-- InstanceParam name="conv" type="URL" value="../../images/rediseño 2012/menu/1-inicio/ii-006.png" -->
+<!-- InstanceParam name="pa1" type="URL" value="../../images/rediseño 2012/menu/4-administrativo/ia-003.png" -->
+<!-- InstanceParam name="pa2" type="URL" value="../../images/rediseño 2012/menu/4-administrativo/ia-002.png" -->
+<!-- InstanceParam name="pa5" type="URL" value="../../images/rediseño 2012/menu/4-administrativo/ia-006.png" -->
+<!-- InstanceParam name="pa6" type="URL" value="../../images/rediseño 2012/menu/4-administrativo/ia-007.png" -->
+<!-- InstanceParam name="pa7" type="URL" value="../../images/rediseño 2012/menu/4-administrativo/ia-008.png" -->
+<!-- InstanceParam name="proc10" type="URL" value="../../images/rediseño 2012/menu/3-curricular/ic-011.png" -->
+<!-- InstanceParam name="proy1" type="text" value="../../images/rediseño 2012/menu/2-proyectos/ip-002.png" -->
+<!-- InstanceParam name="proy2" type="text" value="../../images/rediseño 2012/menu/2-proyectos/ip-003.png" -->
+<!-- InstanceParam name="proy3" type="text" value="../../images/rediseño 2012/menu/2-proyectos/ip-004.png" -->
+</head>
+<body>      
+<div id="contenedor_info">  
+
+  <!-- End SlidesJS Optional-->
+
+  <!-- SlidesJS Required: These styles are required if you'd like a responsive slideshow -->
+  	    
+      <div id="headerUN">
+      <div class="lunal">
+       <div class="escudon"><a href="http://www.unal.edu.co"><img src="../../images/template/images/Escudo_UN.png" alt="escudo" width="185" height="78" /></a></div>
+       
+       <div class="escudorep"><img src="../../images/template/img/escudorep.jpg" alt="escudo colombia" width="70" height="82" /></div>
+       <div style="float:left">
+       <div class="depen">Vicerrectoría Académica</div>
+       <div class="tipage">Dirección Académica Sede Bogotá</div>
+</div>
+      </div>
+      <div class="bar">
+      
+      <div class="in"><a href="../../index.htm"><img src="../../images/inicio.jpg" alt="inicio" width="84" height="18" /></a></div>
+       
+      <div class="bard">
+       <div class="sed" id="sedes_un"><img src="../../images/sedes_un.jpg" alt="sedes" width="59" height="18" /><div class="menuSedes"></div></div>
+       <div class="cor" id="correo_un"><img src="../../images/correo.png" alt="correo" width="67" height="18" /><div class="menuCorreo"></div></div>
+      <div id="buscador_un">                            
+              <form action="http://www.bogota.unal.edu.co/buscar.html" target="_parent">
+                <input value="015779202118420744272:qk5u5rpebla" type="hidden" name="cx"/> 
+                <input value="FORID:11" type="hidden" name="cof"/>
+                <input class="field" size="15" name="q"/> 
+                <input name="submit" type="image" value="Buscar" src="../../images/template/images/buscargo.gif" alt="go" align="top"/>
+              </form>          
+        </div>
+        </div>
+      <div class="pd"><img src="../../images/template/img/pd.png" alt="pd" width="23" height="18" /></div>
+      </div>
+      <div class="date">
+      <div class="mapa"><a href="../../mapa.html" style="font-family: Arial, Helvetica, sans-serif; font-size: 10px; color: #333;">Mapa del sitio</a></div>
+      <div style="float:right;">
+      <iframe src="http://www.plantillasweb.unal.edu.co/fecha.php" name="visor" marginwidth="0" marginheight="0" id="visor" width="156" frameborder="0" height="18" scrolling="auto"></iframe> 
+       </div>
+       
+      </div>
+        
+    </div><br><br>
+    
+  <table width="950" height="336" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td colspan="2"><img src="../../images/rediseño 2014/banner/01-diracad0.jpg" width="950" height="145" /></td>
+    </tr>
+  <tr>
+    <td width="255" valign="top"><table width="255" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td><div id="CollapsiblePanel1_menu" class="CollapsiblePanel">
+          <div class="CollapsiblePanelTab" tabindex="0"><img src="../../images/rediseño 2012/menu/1-inicio/ii-001.1.png" width="255" height="24" /></div>
+          <div class="CollapsiblePanelContent">
+            <table width="255" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td><a href="../../index.htm"><img src="../../images/rediseño 2012/menu/1-inicio/ii-000.png" alt="9" width="255" height="25" /></a></td>
+                </tr>
+              <tr>
+                <td><a href="../../informacion.htm"><img src="../../images/rediseño 2012/menu/1-inicio/ii-002.png" width="255" height="25" /></a></td>
+                </tr>
+              <tr>
+                <td><a href="../../funciones.html"><img src="../../images/rediseño 2012/menu/1-inicio/ii-003.png" alt="9" width="255" height="19" /></a></td>
+                </tr>
+              <tr>
+                <td><a href="../../director.htm"><img src="../../images/rediseño 2012/menu/1-inicio/ii-004.png" alt="9" width="255" height="20" /></a></td>
+                </tr>
+              <tr>
+                <td><a href="../../contacto.htm"><img src="../../images/rediseño 2012/menu/1-inicio/ii-005.png" alt="9" width="255" height="19" /></a></td>
+                </tr>
+              <tr>
+                <td><a href="../../estudiantes.php"><img src="../../images/rediseño 2012/menu/1-inicio/ii-006.png" width="255" height="19" /></a></td>
+                </tr>
+              <tr>
+                <td><a href="../../contact_form.htm"><img src="../../images/rediseño 2012/menu/1-inicio/ii-007.png" alt="9" width="255" height="23" /></a></td>
+                </tr>
+              </table>
+          </div>
+        </div></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td><table width="255" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td><div id="CollapsiblePanel2_menu" class="CollapsiblePanel">
+              <div class="CollapsiblePanelTab" tabindex="0"><img src="../../images/rediseño 2012/menu/2-proyectos/ip-001.1.png" width="255" height="24" /></div>
+              <div class="CollapsiblePanelContent">
+              
+              <table width="255" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><a href="../../proyectos/fortalecimiento.html"><img src="../../images/rediseño 2012/menu/2-proyectos/ip-002.png" width="255" height="42" /></a></td>
+  </tr>
+  <tr>
+    <td><a href="../../proyectos/mejoramiento.html"><img src="../../images/rediseño 2012/menu/2-proyectos/ip-003.png" width="255" height="44" /></a></td>
+  </tr>
+  <tr>
+    <td><a href="../../proyectos/autoevaluacion.html"><img src="../../images/rediseño 2012/menu/2-proyectos/ip-004.png" width="255" height="56" /></a></td>
+  </tr>
+  
+</table>
+
+              
+              </div>
+            </div></td>
+          </tr>
+        </table></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td><div id="CollapsiblePanel3_menu" class="CollapsiblePanel">
+          <div class="CollapsiblePanelTab" tabindex="0"><img src="../../images/rediseño 2012/menu/3-curricular/ic-001.1.png" width="255" height="24" /></div>
+          <div class="CollapsiblePanelContent">
+            <table width="255" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td><a href="../../Procesos_curri/creacion_asignaturas.html"><img src="../../images/rediseño 2012/menu/3-curricular/ic-002.png" width="255" height="22" /></a></td>
+              </tr>
+              <tr>
+                <td><a href="../../pcurri/especializa.htm"><img src="../../images/rediseño 2012/menu/3-curricular/ic-003.png" width="255" height="26" /></a></td>
+              </tr>
+              <tr>
+                <td><a href="http://www.catedras-bogota.unal.edu.co/"><img src="../../images/rediseño 2012/menu/3-curricular/ic-004.png" width="255" height="23" /></a></td>
+              </tr>
+              <tr>
+                <td><a href="../../einternacional/index.html"><img src="../../images/rediseño 2012/menu/3-curricular/ic-005.png" width="255" height="24" /></a></td>
+              </tr>
+              <tr>
+                <td><a href="../../evaluacion/saberpro.htm"><img src="../../images/rediseño 2012/menu/3-curricular/ic-006.png" width="255" height="25" /></a></td>
+              </tr>
+              <tr>
+                <td><a href="../../Procesos_curri/evacursos.htm"><img src="../../images/rediseño 2012/menu/3-curricular/ic-007.png" width="255" height="40" /></a></td>
+              </tr>
+              <tr>
+                <td><a href="../../Procesos_curri/movilidad.htm"><img src="../../images/rediseño 2012/menu/3-curricular/ic-008.png" width="255" height="24" /></a></td>
+              </tr>
+              <tr>
+                <td><a href="../../Procesos_curri/Divulgacion/divulgacion.php"><img src="../../images/rediseño 2012/menu/3-curricular/ic-009.png" width="255" height="25" /></a></td>
+              </tr>
+              <tr>
+                <td><a href="http://www.saebogota.unal.edu.co/page/"><img src="../../images/rediseño 2012/menu/3-curricular/ic-010.png" width="255" height="23" /></a></td>
+              </tr>
+              <tr>
+                <td><a href="../../asistentes_docentes.php"><img src="../../images/rediseño 2012/menu/3-curricular/ic-011.png" width="255" height="25" /></a></td>
+              </tr>
+              <tr>
+                <td><a href="../../intersemestral/index.php"><img src="../../images/rediseño 2012/menu/3-curricular/ic-012.png" width="255" height="23" /></a></td>
+              </tr>
+            </table>
+          </div>
+        </div></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td><div id="CollapsiblePanel4_menu" class="CollapsiblePanel">
+          <div class="CollapsiblePanelTab" tabindex="0"><img src="../../images/rediseño 2012/menu/4-administrativo/ia-001.1.png" width="255" height="24" /></div>
+          <div class="CollapsiblePanelContent">
+            <table width="255" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td><a href="../../Unidad_Administrativa/unidad.html"><img src="../../images/rediseño 2012/menu/4-administrativo/ia-003.png" width="255" height="24" /></a></td>
+              </tr>
+              <tr>
+                <td><a href="../../Unidad_Administrativa/contratacion.php"><img src="../../images/rediseño 2012/menu/4-administrativo/ia-002.png" width="255" height="24" /></a></td>
+              </tr>
+              <tr>
+                <td><a href="http://168.176.88.222/apex/f?p=101:1000"><img src="../../images/rediseño 2012/menu/4-administrativo/ia-004.png" width="255" height="25" /></a></td>
+              </tr>
+              <tr>
+                <td><a href="http://168.176.88.222/apex/f?p=101:1019:::::P1019_FIND_DEPENDENCIA:625"><img src="../../images/rediseño 2012/menu/4-administrativo/ia-005.png" width="255" height="23" /></a></td>
+              </tr>
+              <tr>
+                <td><a href="../../Unidad_Administrativa/sistemas_oficios.html"><img src="../../images/rediseño 2012/menu/4-administrativo/ia-006.png" width="255" height="24" /></a></td>
+              </tr>
+              <tr>
+                <td><a href="../../Unidad_Administrativa/institutos.html"><img src="../../images/rediseño 2012/menu/4-administrativo/ia-007.png" width="255" height="25" /></a></td>
+              </tr>
+              <tr>
+                <td><a href="../../Unidad_Administrativa/dependencias.html"><img src="../../images/rediseño 2012/menu/4-administrativo/ia-008.png" width="255" height="25" /></a></td>
+              </tr>
+            </table>
+          </div>
+        </div></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+      </tr>
+    </table></td>
+    <td width="683" rowspan="2" valign="top">
+
+      <!-- InstanceBeginEditable name="contenido" -->
+        <div id="Contenido_UN">
+          
+          <table width="685" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td align="center" valign="top"><table width="624" border="0" cellspacing="0" cellpadding="0" align="center">
+                <tr>
+                  <td>&nbsp;</td>
+                  </tr>
+                <tr>
+                  <td><form id="testform2" method="post" action="">
+<input type="text" class="w8em format-d-m-y highlight-days-67 range-low-today" name="sd" id="sd" value="" maxlength="10" height="11"/>
+
+      <p class="lastup"><input type="text" class="w8em format-d-m-y highlight-days-67 range-low-today" name="ed" id="ed" value="" maxlength="10" /></p>
+</form></td>
+                  </tr>
+                <tr>
+                  <td align="right">&nbsp;</td>
+                  </tr>
+              </table></td>
+            </tr>
+          </table>
+          
+          
+        </div>
+        <!-- InstanceEndEditable -->
+      
+    </td>
+  </tr>
+  </table>
+      <div id="piedepagina">
+        <div id="piedireccion">
+          <b>Universidad Nacional de Colombia</b><br />
+          Carrera 45 No 26-85 - Edificio Uriel Guti&eacute;rrez<br />
+          Bogot&aacute; D.C. - Colombia
+        </div>
+        <div id="piescudo">
+          <a href="http://www.gobiernoenlinea.gov.co/">
+            <img src="../../images/gobierno.gif" alt="Gobierno en LĂ­nea" border="0" width="58" height="48" />
+          </a>
+          <a href="http://www.agenciadenoticias.unal.edu.co/">
+            <img src="../../images/template/images/agencia.gif" alt="Agencia de Noticias UN" border="0" width="84" height="48" />
+          </a>
+          <a href="http://www.contaduria.gov.co">
+						<img src="../../images/template/images/contad.png" border="0" width="51" height="48" alt="Contadur&iacute;a General de la Naci&oacute;n" />
+		  </a>
+        </div>
+        <div id="pietelefono">
+          <b>PBX: 3165000</b><br />
+          <a href="mailto:CORREO_DEPENDENCIA@unal.edu.co">diracasede_bog@unal.edu.co</a><br />
+          <span class="avisolegal"><a href="http://www.unal.edu.co/legal.pdf">Aviso Legal</a> </span>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+<!--
+var CollapsiblePanel2 = new Spry.Widget.CollapsiblePanel("CollapsiblePanel2_menu");
+var CollapsiblePanel2 = new Spry.Widget.CollapsiblePanel("CollapsiblePanel3_menu");
+var CollapsiblePanel2 = new Spry.Widget.CollapsiblePanel("CollapsiblePanel4_menu");
+var CollapsiblePanel1 = new Spry.Widget.CollapsiblePanel("CollapsiblePanel1_menu");
+//-->
+  </script>
+</body>
+<!-- InstanceEnd --></html>

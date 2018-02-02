@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+	<title>jQuery Timeline 0.9.5 - Dando vida al tiempo</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript"></script>
+	<script src="js/jquery.timelinr-0.9.5.js" type="text/javascript"></script>
+	<script type="text/javascript"> 
+		$(function(){
+			$().timelinr({
+				autoPlay: 'true',
+				autoPlayDirection: 'forward',
+				startAt: 4
+			})
+		});
+	</script>
+</head>
+
+<body>
+	
+	<div id="timeline">
+		<ul id="dates">
+			<li><a href="#1900">1900</a></li>
+			<li><a href="#1944">1944</a></li>
+
+		</ul>
+		<ul id="issues">
+			<li id="1900">
+				<img src="../../../images/new/iconos/desc_blanco.gif" alt="" width="48" height="43" />
+<h1>1900</h1>
+				<p>Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula.</p>
+			</li>
+			<li id="1944">
+				<img src="../../../images/new/iconos/pdf_blanco.gif" alt="" width="60" height="43" />
+<h1>1944</h1>
+				<p>Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula.</p>
+			</li>
+
+		</ul>
+    <div id="grad_left"></div>
+		<div id="grad_right"></div>
+	</div>
+	
+</body>
+</html>
