@@ -127,17 +127,6 @@
 		text-align:center;}
 }
 
-	.column {
-	    float: left;
-	    width: 50%;
-	    padding: 10px;
-	}
-
-	.row:after {
-	    content: "";
-	    display: table;
-	    clear: both;
-	}
 
 </style>
 <!-- fin acciones para formulario -->
@@ -269,41 +258,32 @@
 
 	<center>
 	<div class="texto">
-
-		<!-- Aqui va el contenido de la cátedra -->
-         <div id="contenido">
-			<center>
-		<div class="texto">
-		<!-- InstanceBeginEditable name="Contenido Catedra" -->
-  
-  <div class="wrapper container">
-  	<div class="row">
-    	<nav class="navbar navbar-default" role="navigation">
-          <div class="container-fluid">
+		<nav class="navbar navbar-default" role="navigation">
+          <div class="container-fluid" style="display:inline-block">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#defaultNavbar1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-            </div>
+			</div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="defaultNavbar1">
-            	<ul class="nav navbar-nav navbar-center" color="black">
-                	<li><a href="../index.html" style="color:#FFFFFF">Inicio</a></li>
-                	<li><a href="docs/Programa.pdf" target="_blank" style="color:#FFFFFF">Programa</a></li>
-                	<li><a href="./sesiones.html" style="color:#FFFFFF">Sesiones</a></li>
-                	<li><a href="https://campus.virtual.unal.edu.co/" target="_blank" style="color:#FFFFFF">Moodle</a></li>
-                	<li><a href="./contacto.html" style="color:#FFFFFF">Contacto</a></li>
+				<ul class="nav navbar-nav navbar-center" color="black">
+                	<li><a href="../index.html" style="color:#FFFFFF"> Inicio </a></li>
+                	<li><a href="../docs/Programa.pdf" target="_blank" style="color:#FFFFFF"> Programa </a></li>
+                	<li><a href="./sesiones.html" style="color:#FFFFFF"> Sesiones </a></li>
+                	<li><a href="https://campus.virtual.unal.edu.co/" target="_blank" style="color:#FFFFFF"> Moodle </a></li>
+                	<li><a href="./contacto.html" style="color:#FFFFFF">Atención y Contacto</a></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
           </div>
+          
           <!-- /.container-fluid -->
         </nav>
-    </div>
-    
-<div class="intro-texto row">
-	
-	<article>
-		<h3>Director de la Cátedra</h3><br>
+
+	<div  id="contenido">
+
+		<article>
+		<h3>Coordinador de la Cátedra</h3><br>
 		<font size="5">Tomás Enrique Léon Sicard</font>
 		<p> <B>Correo:</B> teleons@unal.edu.co </p>
 		<br>
@@ -312,24 +292,32 @@
 	<article>
 		<h3>Atención a estudiantes</h3><br>
 
-		<h4><B> Horario </B></h4><br>
-		<img src="../images/2018-1/HorarioAtencion.jpg" width="100%" heigth="100%" id="horario"><br><br><br>
+		<h4><B> Ubicación </B></h4><br>
+
+		<h4> Unidad Camilo Torres Bloque B2 </h4>
+		<h4> Salón 24 </h4><br><br><br>
+
+		<h4><B> Horario y Monitor asignado </B></h4><br>
+		<img src="../images/2018-1/HorarioAtencion.png" width="110%" id="horario"><br><br><br>
+
 
 		<div class="row">
-	        <div class="column">
-	        	<h4><B> Coordinador general: </B></h4>
+	        <div class="col-md-6">
+	        	<h4><B> Auxiliar general: </B></h4>
 	        	<ul>
-	        		<li>Julie Carolina Gallego Herrera - jcgallegoh@unal.edu.co</li>
+	        		<li>Julie Carolina Gallego Herrera</li> 
+	        		<p>jcgallegoh@unal.edu.co</p>
 	        	</ul>
 	        </div>
-	        <div class="column" >
-	        	<h4><B> Coordinador informático: </B></h4>
+	        <div class="col-md-6" >
+	        	<h4><B> Auxiliar informático: </B></h4>
 	        	<ul>
-	        		<li>Juan Camilo López Solano - juclopezso@unal.edu.co</li>
+	        		<li>Juan Camilo López Solano</li>
+	        		<p>juclopezso@unal.edu.co</p>
 	        	</ul>
 	        </div>
     	</div>
-
+    	<br><br><br>
 		<h4><B> Monitores </B></h4><br>
 		<ul>
 			<li>Nicolas Felipe Andrade Gallardo - nfandradeg@unal.edu.co</li>
@@ -348,10 +336,10 @@
 	</article>
 
 
-</div>
 
-         
-		<!-- Fin del contenido de la cátedra -->		
+    </div>
+
+	
 
     <div id="piedeP">
         <div class="row">
